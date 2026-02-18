@@ -10,8 +10,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to Blogify API');
 });
 
-// Mount router
-app.use('/api/v1/posts', postRouter);
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
