@@ -1,9 +1,11 @@
-const express = require('express');
+// src/index.js
 
+const express = require('express');
 const app = express();
 const PORT = 3000;
 
-const postRouter = require('./src/routes/posts.routes');
+// Import posts router
+const postRouter = require('./routes/posts.routes');
 
 // Home route
 app.get('/', (req, res) => {
@@ -13,5 +15,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-}); 
+  console.log(`Server running at http://localhost:${PORT}`);
+});
