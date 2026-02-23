@@ -1,13 +1,9 @@
-// src/routes/posts.routes.js
+const express = require('express')
+const router = express.Router()
 
-const express = require('express');
-const router = express.Router();
+const postController = require('../controllers/posts.controller')
 
-// Import controller
-const postController = require('../controllers/posts.controller');
+router.get('/', postController.getAllPosts)
+router.get('/:postId', postController.getPostById)
 
-// Route
-router.get('/', postController.getAllPosts);
-
-
-module.exports = router;
+module.exports = router
