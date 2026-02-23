@@ -1,11 +1,18 @@
-/ src/controllers/posts.controller.js
+const getAllPosts = async (req, res) => {
+  res.json({
+    message: "Fetching all posts"
+  })
+}
 
-const getAllPosts = (req, res) => {
-  res.status(200).json({
-    message: 'Route handled by postController.getAllPosts'
-  });
-};
+const getPostById = async (req, res) => {
+  const postId = req.params.postId
+
+  res.json({
+    message: "Fetching data for post with ID: " + postId
+  })
+}
 
 module.exports = {
-  getAllPosts
-};
+  getAllPosts,
+  getPostById
+}
